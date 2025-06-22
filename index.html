@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambrozz MovieHub - Discover Amazing Movies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-film"></i>
+                <span>Ambrozz MovieHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#movies" class="nav-link">Movies</a></li>
+                <li><a href="#genres" class="nav-link">Genres</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search movies..." class="search-input">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Discover Your Next Favorite Movie</h1>
+                <p class="hero-description">Explore thousands of movies, read reviews, and find your perfect entertainment match.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Explore Movies</button>
+                    <button class="btn btn-secondary">Watch Trailer</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images\Hero\Thudarum.jpeg height=400&width=600" alt="Featured Movie" id="heroImage">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movies Section -->
+    <section id="movies" class="featured-movies">
+        <div class="container">
+            <h2 class="section-title">Featured Movies</h2>
+            <div class="movie-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="comedy">Comedy</button>
+                <button class="filter-btn" data-filter="drama">Drama</button>
+                <button class="filter-btn" data-filter="horror">Horror</button>
+            </div>
+            <div class="movies-grid" id="moviesGrid">
+                <img src="images\Hero\Thudarum.jpeg height=400&width=600" alt="Featured Movie" id="heroImage">
+                <!-- Movies will be dynamically loaded here -->
+            </div>
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="btn btn-outline">Load More Movies</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genres Section -->
+    <section id="genres" class="genres-section">
+        <div class="container">
+            <h2 class="section-title">Browse by Genre</h2>
+            <div class="genres-grid">
+                <div class="genre-card" data-genre="action">
+                    <i class="fas fa-fist-raised"></i>
+                    <h3>Action</h3>
+                    <p>High-octane thrills</p>
+                </div>
+                <div class="genre-card" data-genre="comedy">
+                    <i class="fas fa-laugh"></i>
+                    <h3>Comedy</h3>
+                    <p>Laugh out loud</p>
+                </div>
+                <div class="genre-card" data-genre="drama">
+                    <i class="fas fa-theater-masks"></i>
+                    <h3>Drama</h3>
+                    <p>Emotional stories</p>
+                </div>
+                <div class="genre-card" data-genre="horror">
+                    <i class="fas fa-ghost"></i>
+                    <h3>Horror</h3>
+                    <p>Spine-chilling scares</p>
+                </div>
+                <div class="genre-card" data-genre="romance">
+                    <i class="fas fa-heart"></i>
+                    <h3>Romance</h3>
+                    <p>Love stories</p>
+                </div>
+                <div class="genre-card" data-genre="sci-fi">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Sci-Fi</h3>
+                    <p>Future worlds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Ambrozz MovieHub</h2>
+                    <p>Amvrozz MovieHub is your ultimate destination for discovering amazing movies. We provide comprehensive information about the latest releases, classic films, and hidden gems.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>10K+</h3>
+                            <p>Movies</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Reviews</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1M+</h3>
+                            <p>Users</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=300&width=400" alt="About CineHub">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-film"></i>
+                        <span>Ambrozz MovieHub</span>
+                    </div>
+                    <p>Your ultimate movie discovery platform</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                        <li><a href="#genres">Genres</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ambrozz MovieHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Movie Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="/placeholder.svg" alt="Movie Poster">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span id="modalYear"></span>
+                        <span id="modalGenre"></span>
+                        <span id="modalRating"></span>
+                    </div>
+                    <p id="modalDescription"></p>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary">Watch Trailer</button>
+                        <button class="btn btn-outline">Add to Watchlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
